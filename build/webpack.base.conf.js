@@ -1,9 +1,9 @@
-var path = require('path')
-var utils = require('./utils')
-var config = require('../config')
-var vueLoaderConfig = require('./vue-loader.conf')
+const path = require('path'),
+    utils = require('./utils'),
+    config = require('../config'),
+    vueLoaderConfig = require('./vue-loader.conf');
 
-function resolve(dir) {
+function resolve (dir) {
     return path.join(__dirname, '..', dir)
 }
 
@@ -27,7 +27,8 @@ module.exports = {
         }
     },
     module: {
-        rules: [{
+        rules: [
+            {
                 test: /\.vue$/,
                 loader: 'vue-loader',
                 options: vueLoaderConfig
@@ -35,6 +36,9 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
+                options: {
+                    presets: ['es2015']
+                },
                 include: [resolve('src'), resolve('test')]
             },
             {
@@ -55,4 +59,4 @@ module.exports = {
             }
         ]
     }
-}
+};

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import home from '../views/Home.vue'
 import chat from '../views/Chat.vue'
+import user from '../views/User.vue'
 
 Vue.use(Router)
 export default new Router({
@@ -14,6 +15,7 @@ export default new Router({
         // { path: '/location/:location/:page(\\d+)?', component: LocationPost },
         {path: '/', component: home},
         {path: '/chat', component: chat},
+        {path: '/user', component: user},
         // ...getRouters()
     ]
 })

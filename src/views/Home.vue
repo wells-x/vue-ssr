@@ -1,11 +1,13 @@
 <template>
     <div>
         it's home
-        </div>
+    </div>
 </template>
-<<script>
-    
+
+<script>
+
 </script>
-<<style lang="scss">
-    
+
+<style lang="scss">
+
 </style>
